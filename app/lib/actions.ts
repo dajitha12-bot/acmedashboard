@@ -113,3 +113,10 @@ export async function deleteInvoice(id: string) {
     console.error('Database Error: Failed to Delete Invoice:', error);
   }
 }
+
+export async function authenticate(
+  prevState: string | undefined,
+  formData: FormData,
+): Promise<string | undefined> {
+  redirect('/dashboard');
+}
